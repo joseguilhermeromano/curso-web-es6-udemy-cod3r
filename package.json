@@ -1,0 +1,24 @@
+{
+  "name": "curso-web-2020",
+  "version": "1.0.0",
+  "description": "Curso Web completo 2020 realizado pela Cod3r",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "keywords": [
+    "html5",
+    "css3",
+    "javascript",
+    "node.js",
+    "vue.js",
+    "angular",
+    "ES6"
+  ],
+  "author": "José Guilherme Romano <jose_guilherme_romano@hotmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-lambda": "^2.6.2",
+    "lodash": "^4.17.20"
+  }
+}

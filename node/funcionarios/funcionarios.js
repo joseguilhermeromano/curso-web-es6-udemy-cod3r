@@ -17,7 +17,7 @@ axios.get(url).then(response => {
 
     const mulherChinesaComMenorSalario = mulheresChinesasOrdenadas[0]
 
-    console.log(mulherChinesaComMenorSalario)
+    // console.log(mulherChinesaComMenorSalario)
 
     //solucao professor
 

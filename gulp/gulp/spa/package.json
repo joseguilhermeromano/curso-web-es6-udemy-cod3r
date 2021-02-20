@@ -1,0 +1,28 @@
+{
+  "name": "spa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp --production"
+  },
+  "keywords": [],
+  "author": "Cod3r",
+  "license": "ISC",
+  "devDependencies": {
+    "font-awesome": "4.7.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "2.6.1",
+    "gulp-htmlmin": "4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "3.0.0",
+    "gulp-uglifycss": "1.0.9",
+    "gulp-watch": "^4.2.4",
+    "gulp-webserver": "^0.1.0",
+    "@babel/cli": "^7.12.17",
+    "@babel/core": "^7.12.17",
+    "babel-preset-env": "^1.7.0",
+    "gulp-babel": "^8.0.0"
+  }
+}

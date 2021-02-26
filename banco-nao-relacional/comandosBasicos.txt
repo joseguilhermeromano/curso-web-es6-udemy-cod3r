@@ -1,0 +1,26 @@
+mongo -u joseromano -p --authenticationDatabase admin
+senha joseromano
+mongo --version 
+help 
+cls -> limpa o terminal 
+show dbs 
+use admin -> seleciona o banco de dados
+db.createCollection('estados') -> cria colucao 
+show collections lista as colecoes
+db.Estados.drop() -> remove a collection
+db.estados.insert({nome:"Acre", sigla: "AC", regiao: "Norte"}) -> insere os dados na base 
+db.estados.save({nome: "Aalagoas", sigla: "AL", regiao: "Nordeste", populacao: 332000})
+
+db.estados.find()
+db.estados.find().pretty()
+
+db.estados.insert({
+    nome: "Rio de Janeiro",
+    sigla: "RJ",
+    regiao: "Sudeste",
+    cidades: [{
+        nome: "Niteroi",
+        area: 133.9,
+        populacao: 487562
+    }]
+})

@@ -1,0 +1,5 @@
+db.estados.remove({sigla: "AC"})
+
+db.estados.remove({ populacao: true }, 1)
+
+db.estados.update({sigla: "RJ"}, {$set: {populacao: 16720000}})

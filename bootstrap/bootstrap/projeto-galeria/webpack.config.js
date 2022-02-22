@@ -9,7 +9,13 @@ module.exports = {
     mode: modoDev ? 'development' : 'production',
     entry: './src/index.js',
     devServer: {
-        contentBase: './build',
+        static: {
+            directory: './build'
+        },
+        // publicPath
+        devMiddleware:{
+            publicPath: "/",
+        },
         port: 9000,
     },
     optimization: {
@@ -28,10 +34,10 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({ filename: 'estilo.css' }),
-        new CopyWebpackPlugin([
+        new CopyWebpackPlugin({patterns: [
             { context: 'src/', from: '**/*.html' },
             { context: 'src/', from: 'imgs/**/*' }
-        ])
+        ]})
     ],
     module: {
         rules: [{
@@ -44,10 +50,16 @@ module.exports = {
             ]
         }, {
             test: /\.(png|svg|jpg|gif)$/,
-            use: ['file-loader']
+            use: [
+                {loader: 'file-loader'}
+            ],
+            type: 'javascript/auto',
         }, {
             test: /.(ttf|otf|eot|svg|woff(2)?)$/,
-            use: ['file-loader']
-        }]
+            use: [
+                {loader: 'file-loader'}
+            ],
+            type: 'javascript/auto',
+        },]
     }
 }

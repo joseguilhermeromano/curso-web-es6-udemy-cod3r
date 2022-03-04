@@ -7,8 +7,6 @@ module.exports = app => {
             name: req.body.name,
             parentId: req.body.parentId
         }
-
-        console.log(category)
          
         if(req.params.id) category.id = req.params.id
 
@@ -48,7 +46,7 @@ module.exports = app => {
                 .where({ id: req.params.id }).del()
             existsOrError(rowsDeleted, 'Categoria não foi encontrada.')
 
-            req.status(204).send()
+            res.status(204).send()
         }catch(msg) {
             res.status(400).send(msg)
         }
